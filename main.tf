@@ -29,7 +29,7 @@ provider "aws" {
 
 resource "random_pet" "sg" {}
 
-resource "aws_instance" "web" {
+resource "aws_instance" "web1" {
   ami                    = "ami-087c17d1fe0178315"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.web-sg.id]
@@ -52,5 +52,5 @@ resource "aws_security_group" "web-sg" {
 }
 
 output "web-address" {
-  value = "${aws_instance.web.public_dns}:8080"
+  value = "${aws_instance.web1.public_dns}:8080"
 }
