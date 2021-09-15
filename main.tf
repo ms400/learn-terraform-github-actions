@@ -12,10 +12,10 @@ terraform {
   required_version = ">= 0.14"
 
   backend "remote" {
-    organization = "test-sel2"
+    organization = "t-azure"
 
     workspaces {
-      name = "learn-terraform-github-actions"
+      name = "gh-action-demo"
     }
   }
 }
